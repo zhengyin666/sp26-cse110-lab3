@@ -17,17 +17,17 @@
 
     <nav>
       <ul>
-        <li><a href="#Attendance">Attendance</a></li>
-        <li><a href="#Agenda">Agenda</a></li>
-        <li><a href="#Media">Media</a></li>
-        <li><a href="#Form">Feedback Form</a></li>
+        <li><a href="#attendance">Attendance</a></li>
+        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#form">Feedback Form</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
 
-    <section id="Attendance">
+    <section id="attendance">
       <h2>Attendance</h2>
       <ul>
         <li><b>Zhengyin</b></li>
@@ -39,23 +39,27 @@
 
     <hr>
 
-    <section id="Agenda">
+    <section id="agenda">
       <h2>Agenda</h2>
+      <div>
+        <p>This meeting focused on <span>brainstorming</span> ideas for the project.</p>
+      </div>
       <ol>
         <li>Discuss project goals</li>
         <li>Share ideas</li>
         <li>Assign tasks</li>
+        <li>Set deadlines</li>
+        <li>Choose communication tools</li>
       </ol>
 
-      <div>
-        <p>This meeting focused on <span>brainstorming</span> ideas for the project.</p>
-        <p>We want to keep the design simple.<br>More features can be added later.</p>
-      </div>
     </section>
 
     <section>
       <h2>Unfinished Business</h2>
-      <p>We still need to finalize the main feature set.</p>
+      <ul>
+        <li>The team had not finalized the project topic.</li>
+        <li>The weekly meeting schedule has not been confirmed yet.</li>
+      </ul>
     </section>
 
     <section>
@@ -70,7 +74,7 @@
       <h2>Comments</h2>
       <details>
         <summary>Click to view discussion notes</summary>
-        <p>Team agreed to start simple and improve later.</p>
+        <p>Team agreed to use <b>GitHub</b> for version control, and <i>Slack</i> for communication.</p>
       </details>
     </section>
 
@@ -82,7 +86,7 @@
 
       <h3>Audio Recording</h3>
       <audio controls>
-        <source src="audio.m4a" type="audio/mpeg">
+        <source src="audio.m4a" type="audio/mp4">
       </audio>
 
       <h3>Video Recording</h3>
@@ -91,65 +95,64 @@
       </video>
     </section>
 
+    <section id="form">
+      <h2>Feedback Form</h2>
+
+      <form>
+        <fieldset>
+          <legend>Meeting Feedback</legend>
+
+          <label for="name">Name:</label>
+          <input id="name" type="text" name="name"><br><br>
+
+  
+          <label for="date">Date:</label>
+          <input id="date" type="date" name="date"><br><br>
+
+        
+          <label>Topics you liked:</label><br>
+          <input id="design" type="checkbox" name="topic" value="design">
+          <label for="design">Design</label><br>
+
+          <input id="features" type="checkbox" name="topic" value="features">
+          <label for="features">Features</label><br><br>
+
+          <label>Was the meeting helpful?</label><br>
+          <input id="yes" type="radio" name="helpful" value="yes">
+          <label for="yes">Yes</label><br>
+
+          <input id="no" type="radio" name="helpful" value="no">
+          <label for="no">No</label><br><br>
+
+          <label for="tool">Favorite tool:</label>
+          <input id="tool" list="tools">
+          <datalist id="tools">
+            <option value="VS Code">
+            <option value="GitHub">
+            <option value="Notion">
+          </datalist><br><br>
+
+          <label for="rating">Meeting rating:</label>
+          <select id="rating">
+            <option>Excellent</option>
+            <option>Good</option>
+            <option>Average</option>
+          </select><br><br>
+
+          <label for="comments">Additional comments:</label><br>
+          <textarea id="comments" rows="4" cols="30"></textarea><br><br>
+
+          <button type="submit">Submit</button>
+
+        </fieldset>
+      </form>
+    </section>
+
   </main>
 
   <footer>
-    <p>Prepared by the team</p>
+    <p>Prepared by Zhengyin Yang</p>
   </footer>
-
-  <!-- FORM SECTION -->
-  <section id="form">
-    <h2>Feedback Form</h2>
-
-    <form>
-      <fieldset>
-        <legend>Meeting Feedback</legend>
-
-        <!-- text input -->
-        <label>Name:</label>
-        <input type="text" name="name"><br><br>
-
-        <!-- date input -->
-        <label>Date:</label>
-        <input type="date" name="date"><br><br>
-
-        <!-- checkbox -->
-        <label>Topics you liked:</label><br>
-        <input type="checkbox" name="topic" value="design"> Design<br>
-        <input type="checkbox" name="topic" value="features"> Features<br><br>
-
-        <!-- radio -->
-        <label>Was the meeting helpful?</label><br>
-        <input type="radio" name="helpful" value="yes"> Yes<br>
-        <input type="radio" name="helpful" value="no"> No<br><br>
-
-        <!-- datalist -->
-        <label>Favorite tool:</label>
-        <input list="tools">
-        <datalist id="tools">
-          <option value="VS Code">
-          <option value="GitHub">
-          <option value="Notion">
-        </datalist><br><br>
-
-        <!-- select -->
-        <label>Meeting rating:</label>
-        <select>
-          <option>Excellent</option>
-          <option>Good</option>
-          <option>Average</option>
-        </select><br><br>
-
-        <!-- textarea -->
-        <label>Additional comments:</label><br>
-        <textarea rows="4" cols="30"></textarea><br><br>
-
-        <!-- button -->
-        <button type="submit">Submit</button>
-
-      </fieldset>
-    </form>
-  </section>
 
 </body>
 </html>
