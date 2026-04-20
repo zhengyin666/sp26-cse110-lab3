@@ -3,7 +3,7 @@ name: Template for lab task
 about: To describe the lab task.
 title: ''
 labels: task
-assignees: ''
+assignees: zhengyin666
 
 ---
 
