@@ -1,2 +1,2 @@
 # Lab 2 - Starter
-My [published site link](https://zhengyin666.github.io/Lab2_Starter/)
+My [published site link](https://zhengyin666.github.io/sp26-cse110-lab3/)
