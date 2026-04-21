@@ -6,30 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Meeting Minutes</title>
   <link rel="icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .internal-note {
+      text-align: center;
+      font-size: 1rem;
+      color: hsl(210, 60%, 35%);
+    }
+  </style>
 </head>
 
 <body>
+  <header class="site-header">
+    <h1 id="main-title">Lab 2 Meeting Minutes</h1>
+    <h2 class="subtitle">Brainstorming Session</h2>
+    <p class="meeting-date"><strong>Date:</strong> April 8, 2026</p>
+    <p class="internal-note">Updated in Lab 3 with CSS styling and responsive layout.</p>
 
-  <header>
-    <h1>Lab2 Meeting Minutes</h1>
-    <h2>Brainstorming Session</h2>
-    <p><strong>Date:</strong> April 8, 2026</p>
-
-    <nav>
-      <ul>
+    <nav class="main-nav">
+      <ul class="nav-list">
         <li><a href="#attendance">Attendance</a></li>
         <li><a href="#agenda">Agenda</a></li>
+        <li><a href="#business">Business</a></li>
         <li><a href="#media">Media</a></li>
         <li><a href="#form">Feedback Form</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-
-    <section id="attendance">
+  <main class="page-layout">
+    <section id="attendance" class="card section-card">
       <h2>Attendance</h2>
-      <ul>
+      <ul class="people-list">
         <li><b>Zhengyin</b></li>
         <li><i>Yanbai</i></li>
         <li><em>Junlin</em></li>
@@ -37,12 +51,10 @@
       </ul>
     </section>
 
-    <hr>
-
-    <section id="agenda">
+    <section id="agenda" class="card section-card">
       <h2>Agenda</h2>
-      <div>
-        <p>This meeting focused on <span>brainstorming</span> ideas for the project.</p>
+      <div class="agenda-intro">
+        <p>This meeting focused on <span class="highlight">brainstorming</span> ideas for the project.</p>
       </div>
       <ol>
         <li>Discuss project goals</li>
@@ -51,65 +63,72 @@
         <li>Set deadlines</li>
         <li>Choose communication tools</li>
       </ol>
-
     </section>
 
-    <section>
-      <h2>Unfinished Business</h2>
-      <ul>
-        <li>The team had not finalized the project topic.</li>
-        <li>The weekly meeting schedule has not been confirmed yet.</li>
-      </ul>
+    <section id="business" class="business-grid">
+      <section class="card section-card unfinished">
+        <h2>Unfinished Business</h2>
+        <ul>
+          <li>The team had not finalized the project topic.</li>
+          <li>The weekly meeting schedule has not been confirmed yet.</li>
+        </ul>
+      </section>
+
+      <section class="card section-card new-business">
+        <h2>New Business</h2>
+        <ul>
+          <li>Add timer notifications</li>
+          <li>Confirm future meeting dates</li>
+        </ul>
+      </section>
+
+      <section class="card section-card comments-box">
+        <h2>Comments</h2>
+        <details>
+          <summary>Click to view discussion notes</summary>
+          <p>Team agreed to use <b>GitHub</b> for version control, and <i>Slack</i> for communication.</p>
+        </details>
+      </section>
     </section>
 
-    <section>
-      <h2>New Business</h2>
-      <ul>
-        <li>Add timer notifications</li>
-        <li>Confirm future meeting dates</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Comments</h2>
-      <details>
-        <summary>Click to view discussion notes</summary>
-        <p>Team agreed to use <b>GitHub</b> for version control, and <i>Slack</i> for communication.</p>
-      </details>
-    </section>
-
-    <section id="media">
+    <section id="media" class="card section-card">
       <h2>Images and Media</h2>
 
-      <h3>Diagram</h3>
-      <img src="1.webp" alt="Software development workflow diagram" width="300">
+      <div class="media-flex">
+        <div class="media-item">
+          <h3>Diagram</h3>
+          <img src="1.webp" alt="Whiteboard diagram" width="300">
+        </div>
 
-      <h3>Audio Recording</h3>
-      <audio controls>
-        <source src="audio.m4a" type="audio/mp4">
-      </audio>
+        <div class="media-item">
+          <h3>Audio Recording</h3>
+          <audio controls>
+            <source src="audio.m4a" type="audio/mp4">
+          </audio>
+        </div>
 
-      <h3>Video Recording</h3>
-      <video controls width="300">
-        <source src="video.mp4" type="video/mp4">
-      </video>
+        <div class="media-item">
+          <h3>Video Recording</h3>
+          <video controls width="300">
+            <source src="video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
     </section>
 
-    <section id="form">
+    <section id="form" class="card section-card">
       <h2>Feedback Form</h2>
 
-      <form>
+      <form class="feedback-form">
         <fieldset>
           <legend>Meeting Feedback</legend>
 
           <label for="name">Name:</label>
-          <input id="name" type="text" name="name"><br><br>
+          <input id="name" type="text" name="name" placeholder="Enter your name"><br><br>
 
-  
           <label for="date">Date:</label>
           <input id="date" type="date" name="date"><br><br>
 
-        
           <label>Topics you liked:</label><br>
           <input id="design" type="checkbox" name="topic" value="design">
           <label for="design">Design</label><br>
@@ -127,9 +146,9 @@
           <label for="tool">Favorite tool:</label>
           <input id="tool" list="tools">
           <datalist id="tools">
-            <option value="VS Code">
-            <option value="GitHub">
-            <option value="Notion">
+            <option value="VS Code"></option>
+            <option value="GitHub"></option>
+            <option value="Notion"></option>
           </datalist><br><br>
 
           <label for="rating">Meeting rating:</label>
@@ -142,17 +161,23 @@
           <label for="comments">Additional comments:</label><br>
           <textarea id="comments" rows="4" cols="30"></textarea><br><br>
 
-          <button type="submit">Submit</button>
-
+          <button
+            type="submit"
+            style="background-color: coral; color: white; border: none; padding: 0.6rem 1rem; border-radius: 0.5rem;"
+          >
+            Submit
+          </button>
         </fieldset>
       </form>
     </section>
 
+    <p class="hidden-note">This hidden note is only here to demonstrate display: none.</p>
   </main>
 
-  <footer>
+  <aside class="fixed-note">Lab 3 Styled Version</aside>
+
+  <footer class="site-footer">
     <p>Prepared by Zhengyin Yang</p>
   </footer>
-
 </body>
 </html>
